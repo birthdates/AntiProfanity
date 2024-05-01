@@ -8,4 +8,4 @@ max-threads: -1 # Maximum number of threads to use for processing (default unlim
 ```
 
 ## API
-This project uses [Profanity.Dev](profanity.dev) to detect profanity. They offer a free API that you can use to detect profanity in your chat. You can get your API key by signing up on their website.
+This project uses [Profanity.Dev](https://profanity.dev) to detect profanity. They offer a free API that you can use to detect profanity in your chat. You can get your API key by signing up on their website.
