@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.birthdates'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+
+        // As of Gradle 5.1, you can limit this to only those
+        // dependencies you expect from it
+        content {
+            includeGroup 'org.bukkit'
+            includeGroup 'org.spigotmc'
+        }
+    }
+    maven { url "https://repo.dmulloy2.net/repository/public/" }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.20.2-R0.1-SNAPSHOT' // The Spigot API with no shadowing. Requires the OSS repo.
+    compileOnly 'com.comphenix.protocol:ProtocolLib:5.1.0'
+}
+
+compileJava.options.encoding = 'UTF-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
